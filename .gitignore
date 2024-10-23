@@ -1,0 +1,4 @@
+/config.json
+/venv/
+/src/data/*
+node_modules
