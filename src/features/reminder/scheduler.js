@@ -2,12 +2,12 @@
 
 const path = require('path');
 const cron = require('node-cron');
-const { executePythonScript } = require('../../utils/pythonUtils');
+const { executePythonScript } = require('../../utils/pyScriptExer');
 const { checkReminders } = require('./checker');
 
 const {channelId} = require('../../config.json');
 
-async function scheduleReminders(client){
+async function scheduleReminder(client){
     const pypath = path.resolve(__dirname, '../scraping', 'scraper.py');
 
     cron.schedule('0 12 * * *', async () => {
@@ -32,4 +32,4 @@ async function scheduleReminders(client){
     });
 }
 
-module.exports = { scheduleReminders };
+module.exports = { scheduleReminder };

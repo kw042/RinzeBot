@@ -23,7 +23,7 @@ const filterEndEvents = async (filepath) => {
     }
 };
 
-const sendRemind = async (client, endEvents) => {
+const sendReminder = async (client, endEvents) => {
     const channel = client.channels.cache.get(channelId); //チャンネルIDの設定
     if (!channel){
         console.error('チャンネルIDが見つからない', err);
@@ -54,7 +54,7 @@ const checkReminders = async (client) =>{
     const filepath = path.resolve(__dirname, '../../data', 'events.json');
 
     const endEvents = await filterEndEvents(filepath);
-    await sendRemind(client, endEvents);
+    await sendReminder(client, endEvents);
 
     console.log('リマインダチェックの終了');
 };

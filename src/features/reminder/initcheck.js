@@ -1,5 +1,6 @@
 const {executePythonScript } = require('../../utils/pyScriptExer');
 const { checkReminders } = require('./checker');
+const path = require('path');
 
 async function initCheck(client){
     const pypath = path.resolve(__dirname, '../scraping', 'scraper.py');
