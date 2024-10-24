@@ -1,8 +1,9 @@
-// src/features/reminder/checker.js 前日のものをチェック
+// src/features/reminder/checker.js 前日のものをチェックしてリマインダを送信
 const path = require('path');
 const { channelId} = require('../../config.json');
 
-const { loadJSON } = require('../../utils/jsonUtils');  
+const { loadJSON } = require('../../utils/jsonUtils');
+const { formatDate, getTomorrowStr } = require('../../utils/dateUtils');
 
 const filterEndEvents = async (filepath) => {
     const tomorrow = getTomorrowStr(); // 'YYYY-MM-DDの形式で明日の日本の日付を取得'

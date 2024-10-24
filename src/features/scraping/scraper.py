@@ -131,6 +131,6 @@ def scrape(url, html_filepath, json_filepath):
 if __name__ == "__main__":
     url = "https://asobiticket2.asobistore.jp/receptions"
     html_filepath = "src\data\page_content.html"
-    json_filepath = "src\data\\reminders.json"
+    json_filepath = "src\data\events.json"
 
     scrape(url, html_filepath, json_filepath)
