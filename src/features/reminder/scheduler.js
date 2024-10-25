@@ -7,6 +7,7 @@ const { checkReminders } = require('./checker');
 
 const {channelId} = require('../../config.json');
 
+// 毎日12時に一連の処理を実行
 async function scheduleReminder(client){
     const pypath = path.resolve(__dirname, '../scraping', 'scraper.py');
 
@@ -15,10 +16,10 @@ async function scheduleReminder(client){
 
         try {
             console.log('Pythonスクリプトの開始');
-            await executePythonScript(pypath);
+            await executePythonScript(pypath); // Pythonスクリプトの実行
 
             console.log('リマインダのチェック');
-            await checkReminders(client);
+            await checkReminders(client);  // リマインダのチェック
 
         } catch (error){
             console.error('スケジュールされたタスクの実行中にエラーが発生', error);

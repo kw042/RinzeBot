@@ -1,3 +1,4 @@
+// src/utils/dateUtils.js 日付関連のユーティリティ関数を定義
 // 日本時間を取得する関数
 const getJapanDateTime = () => {
     const now = new Date();
@@ -25,6 +26,7 @@ const getTomorrowJapan = () => {
     return tomorrow;
 };
 
+// 明日の日付を'YYYY-MM-DD'形式で取得する関数
 const getTomorrowStr = () => {
     const tomorrow = getTomorrowJapan();
     return formatDateForJapan(tomorrow);

@@ -1,3 +1,4 @@
+// src/utils/pyScriptExer.js Pythonスクリプトを実行する関数を定義
 const { spawn } = require('child_process');
 const path = require('path');  // { path } の誤りを修正
 

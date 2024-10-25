@@ -1,4 +1,4 @@
-// src/lib/utils/jsonHandler.js
+// src/lib/utils/jsonHandler.js JSONファイルの読み書きを行う関数を定義
 const fs = require('fs').promises;
 
 /**

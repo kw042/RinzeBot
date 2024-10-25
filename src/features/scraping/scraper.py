@@ -117,7 +117,7 @@ def save_to_json(data, filepath):
 
 def scrape(url, html_filepath, json_filepath):
     try:
-        # すでにHTMLファイルが存在する場合はスキップ
+        # test用,すでにHTMLファイルが存在する場合はスキップ
         if not os.path.exists(html_filepath):
             download_html(url, html_filepath)
 
