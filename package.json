@@ -1,8 +1,9 @@
 {
   "name": "rinzebot",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "/src/index.js",
   "scripts": {
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -10,6 +11,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "discord.js": "^14.16.3"
+    "discord.js": "^14.16.3",
+    "node-cron": "^3.0.3"
   }
 }
