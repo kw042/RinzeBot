@@ -1,1 +1,9 @@
-## Rinze will notify you of live deadlines. ##
+# Rinze Discord Bot
+
+アイマスのライブ情報をスクレイピングし、申込期限日前日にDiscordサーバ上で通知を行うリマインダーBot。BotはPythonとNode.jsにより構築。
+
+## 機能
+
+- **リマインダー機能**: 初回実行時と毎日12:00に機嫌が明日のライブがあれば通知
+- **スラッシュコマンド**: `/events`で現在申込可能なイベント一覧を表示
+
