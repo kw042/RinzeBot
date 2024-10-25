@@ -43,8 +43,7 @@ const sendReminder = async (client, endEvents) => {
     for (const event of endEvents){
         try {
             await channel.send(
-                `${event.title}の${event.form}の期限が明日
-                \n申し込みはこちらのリンクより: https://asobiticket2.asobistore.jp/\n`
+                `プロデューサーさま、 **${event.title}**の**${event.form}** の申し込み期限が、明日に迫っております......\n申し込みはこちらのリンクより: https://asobiticket2.asobistore.jp/receptions\n`
             );
             console.log(`リマインド通知を送信->公演タイトル：${event.title}`);
         }

@@ -118,12 +118,12 @@ def save_to_json(data, filepath):
 def scrape(url, html_filepath, json_filepath):
     try:
         # test用,すでにHTMLファイルが存在する場合はスキップ
-        if not os.path.exists(html_filepath):
-            download_html(url, html_filepath)
+        # if not os.path.exists(html_filepath):
+        #     download_html(url, html_filepath)
 
-        #download_html(url, html_filepath)
-        data = get_items(html_filepath)
-        save_to_json(data, json_filepath)
+        download_html(url, html_filepath) #HTMLファイルのダウンロード
+        data = get_items(html_filepath) #HTMLファイルの解析
+        save_to_json(data, json_filepath) #JSONファイルの保存
 
     except Exception as e:
         print(f"スクレイピングに失敗: {e}")

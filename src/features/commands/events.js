@@ -9,12 +9,13 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('events')
         .setDescription('申込期間内の公演一覧を表示'),
+
     // key -> execute value -> function
     execute: async function(interaction){
         try {
-            console.log('申し込み可能なイベントを取得');
+            console.log('申し込み可能な公演を取得');
             const jsonPath = path.resolve(__dirname, '../../data','events.json');
-            const eventsList = loadJSON(jsonPath); // JSONファイルの読み込み
+            const eventsList = await loadJSON(jsonPath); // JSONファイルの読み込み
             const activeEvents = eventsList.filter(event => event.state === 'active'); // 期間内の公演を抽出
 
             if(activeEvents.length === 0){
@@ -26,10 +27,10 @@ module.exports = {
             }
             
             // 申込可能な公演の一覧の作成
-            let reply = '【申込可能なイベント一覧】\n';
+            let reply = 'こちらが申込可能な公演の一覧でございます.....\n';
             activeEvents.forEach(event => {
                 reply += `\n━━━━━━━━━━━━━━━━━━━━━━\n`;
-                reply += `**イベント名**: ${event.title}\n`;
+                reply += `**公演名**: ${event.title}\n`;
                 reply += `**申込形式**: ${event.form}\n`;
                 reply += `**申込期間**: ${event.start}〜${event.end}\n`;
             });

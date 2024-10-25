@@ -15,10 +15,7 @@ async function scheduleReminder(client){
         console.log('スケジュールされたタスクの開始');
 
         try {
-            console.log('Pythonスクリプトの開始');
             await executePythonScript(pypath); // Pythonスクリプトの実行
-
-            console.log('リマインダのチェック');
             await checkReminders(client);  // リマインダのチェック
 
         } catch (error){

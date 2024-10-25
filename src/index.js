@@ -3,7 +3,7 @@ const { Client, Events, GatewayIntentBits } = require('discord.js');
 const { token } = require('./config.json');
 const { initCheck } = require('./features/reminder/initcheck');
 const { scheduleReminder } = require('./features/reminder/scheduler');
-const { myInteractionCreate } = require('./features/commands/interaction');
+const myInteractionCreate = require('./features/commands/interaction');
 
 const client = new Client({
     intents: [
